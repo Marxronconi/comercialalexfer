@@ -1,0 +1,465 @@
+/* =============================================
+   COMERCIAL ALEXFER — responsive.css
+   Media Queries: Mobile-first breakpoints
+   ============================================= */
+
+/* ---- TABLET GRANDE (max 1200px) ---- */
+@media (max-width: 1200px) {
+  :root {
+    --container-padding: 1.25rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .footer-grid .footer-col:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---- TABLET (max 1024px) ---- */
+@media (max-width: 1024px) {
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.6rem; }
+
+  section { padding: var(--spacing-3xl) 0; }
+
+  /* Header — hide desktop nav, show hamburger */
+  nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 85vh;
+  }
+
+  .hero-inner {
+    padding: 1rem 0;
+  }
+
+  /* Features bar */
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  /* Categories */
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Why choose */
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-grid .why-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  /* Testimonials */
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Products */
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Products page layout */
+  .products-layout {
+    grid-template-columns: 220px 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  /* Team */
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* About values */
+  .about-values {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  /* Contact */
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-grid .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---- TABLET PEQUENO (max 768px) ---- */
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 1rem;
+    --spacing-4xl: 3rem;
+    --spacing-3xl: 2.5rem;
+  }
+
+  h1 { font-size: 1.85rem; }
+  h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.35rem; }
+
+  /* Top bar — simplify */
+  .topbar .container {
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+    font-size: 0.7rem;
+  }
+
+  .topbar-left {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 75vh;
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.6rem, 5vw, 2.5rem);
+  }
+
+  .hero p {
+    font-size: var(--font-size-base);
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-trust {
+    gap: 0.75rem;
+  }
+
+  /* Features */
+  .features-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+  }
+
+  /* Categories */
+  .categories-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .category-card { height: 180px; }
+
+  /* Why choose */
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-grid .why-card:last-child {
+    max-width: 100%;
+  }
+
+  /* Products */
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  /* Products page — stack sidebar below */
+  .products-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-filters {
+    position: static;
+    order: -1;
+  }
+
+  /* Filter bar horizontal scroll */
+  .filter-bar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: var(--spacing-sm);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .filter-bar::-webkit-scrollbar { display: none; }
+
+  .filter-btn { flex-shrink: 0; }
+
+  /* Team */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Section header */
+  .section-header h2 {
+    font-size: 1.6rem;
+  }
+
+  /* Payment icons */
+  .payment-icons {
+    gap: var(--spacing-sm);
+  }
+
+  .payment-badge {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-xs);
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Countdown */
+  .countdown {
+    gap: var(--spacing-sm);
+  }
+
+  .countdown-block {
+    min-width: 60px;
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .countdown-num {
+    font-size: 1.5rem;
+  }
+
+  /* About split */
+  .about-split {
+    flex-direction: column !important;
+  }
+
+  /* Contact form row */
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* Page banner */
+  .page-banner h1 {
+    font-size: 1.6rem;
+  }
+
+  /* Float buttons */
+  .float-whatsapp {
+    width: 52px;
+    height: 52px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .float-top {
+    bottom: 84px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  /* CTA section */
+  .cta-section h2 {
+    font-size: 1.6rem;
+  }
+
+  /* Offers hero */
+  .offers-hero h1 {
+    font-size: clamp(1.6rem, 5vw, 2.5rem);
+  }
+}
+
+/* ---- MOBILE (max 480px) ---- */
+@media (max-width: 480px) {
+  :root {
+    --container-padding: 0.875rem;
+  }
+
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.4rem; }
+
+  /* Hero */
+  .hero {
+    min-height: 60vh;
+  }
+
+  .hero-trust {
+    display: none;
+  }
+
+  /* Top bar hidden on very small */
+  .topbar { display: none; }
+
+  /* Features — single column */
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Categories — single column */
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card { height: 160px; }
+
+  /* Products — single column */
+  .products-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  /* Team — single column */
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Logo menor em telas pequenas */
+  .logo-img { height: 34px; }
+
+  /* Mobile menu nav larger touch targets */
+  .mobile-menu nav a {
+    font-size: var(--font-size-xl);
+    padding: var(--spacing-lg) var(--spacing-xl);
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 12px 20px;
+  }
+
+  .btn-lg {
+    padding: 14px 24px;
+    font-size: var(--font-size-sm);
+  }
+
+  /* Contact info cards stack */
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Section header */
+  .section-header {
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  /* Testimonials */
+  .testimonial-card {
+    padding: var(--spacing-lg);
+  }
+
+  /* Footer compact */
+  .footer-grid { gap: var(--spacing-xl); }
+
+  /* Lightbox */
+  .lightbox-inner {
+    max-width: 95vw;
+  }
+
+  /* Page banner compact */
+  .page-banner {
+    padding: var(--spacing-2xl) 0;
+  }
+}
+
+/* ---- PRINT STYLES ---- */
+@media print {
+  .topbar,
+  header,
+  .float-whatsapp,
+  .float-top,
+  footer,
+  .btn,
+  .mobile-menu,
+  .hamburger {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    color: #000;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+
+  section {
+    padding: 1.5rem 0;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+/* ---- ACCESSIBILITY & MOTION ---- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .animate-fadeInUp,
+  .animate-fadeInLeft,
+  .animate-fadeIn {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ---- HIGH CONTRAST ---- */
+@media (prefers-color-scheme: dark) {
+  /* Mantém o tema claro por padrão — descomente para ativar dark mode:
+  :root {
+    --color-white: #1a1a1a;
+    --color-light: #2d2d2d;
+    --color-dark: #f5f5f5;
+    --color-gray: #aaaaaa;
+    --color-gray-border: #3d3d3d;
+  }
+  */
+}
