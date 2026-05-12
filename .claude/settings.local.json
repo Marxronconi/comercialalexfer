@@ -1,7 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "PowerShell(New-Item -ItemType Directory -Path \"c:\\\\Users\\\\plugify\\\\Desktop\\\\alexfer\\\\images\" -Force)"
-    ]
-  }
-}
