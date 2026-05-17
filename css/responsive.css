@@ -36,6 +36,10 @@
     display: none;
   }
 
+  .mobile-menu nav {
+    display: flex;
+  }
+
   .hamburger {
     display: flex;
   }
