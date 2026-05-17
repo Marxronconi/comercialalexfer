@@ -122,25 +122,27 @@
 @media (max-width: 768px) {
   :root {
     --container-padding: 1rem;
-    --spacing-4xl: 3rem;
-    --spacing-3xl: 2.5rem;
+    --spacing-4xl: 2.5rem;
+    --spacing-3xl: 2rem;
+    --spacing-2xl: 1.75rem;
   }
 
-  h1 { font-size: 1.85rem; }
-  h2 { font-size: 1.6rem; }
-  h3 { font-size: 1.35rem; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
 
-  /* Top bar — simplify */
+  /* Top bar — mostrar só telefone */
   .topbar .container {
-    flex-direction: column;
-    gap: 4px;
-    text-align: center;
-    font-size: 0.7rem;
+    justify-content: center;
+    font-size: 0.72rem;
   }
 
-  .topbar-left {
-    flex-direction: column;
-    gap: 4px;
+  .topbar-left span:not(:first-child) {
+    display: none;
+  }
+
+  .topbar-right a:not(:first-child) {
+    display: none;
   }
 
   /* Hero */
@@ -312,92 +314,115 @@
 @media (max-width: 480px) {
   :root {
     --container-padding: 0.875rem;
+    --spacing-4xl: 2rem;
+    --spacing-3xl: 1.5rem;
+    --spacing-2xl: 1.25rem;
   }
 
-  h1 { font-size: 1.6rem; }
-  h2 { font-size: 1.4rem; }
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.15rem; }
 
-  /* Hero */
+  section { padding: 2rem 0; }
+
+  .section-header {
+    margin-bottom: 1.25rem;
+  }
+
+  /* Hero compacto */
   .hero {
-    min-height: 60vh;
+    min-height: auto;
+    padding: 2rem 0 2.5rem;
   }
 
-  .hero-trust {
-    display: none;
-  }
+  .hero-trust { display: none; }
 
-  /* Top bar hidden on very small */
+  /* Top bar oculto */
   .topbar { display: none; }
 
-  /* Features — single column */
+  /* Features — 2 colunas compactas */
   .features-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.625rem;
   }
 
-  /* Categories — single column */
+  .feature-card {
+    padding: 1rem 0.75rem;
+  }
+
+  .feature-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Categories — 2 colunas */
   .categories-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.625rem;
   }
 
-  .category-card { height: 160px; }
+  .category-card { height: 140px; }
 
-  /* Products — single column */
+  /* Products — 2 colunas */
   .products-grid {
-    grid-template-columns: 1fr;
-    max-width: 360px;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: none;
+    gap: 0.75rem;
   }
 
-  /* Team — single column */
+  /* Team — 2 colunas */
   .team-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
-  /* Logo menor em telas pequenas */
-  .logo-img { height: 34px; }
+  /* Logo menor */
+  .logo-img { height: 32px; }
 
-  /* Mobile menu nav larger touch targets */
+  /* Mobile menu */
   .mobile-menu nav a {
-    font-size: var(--font-size-xl);
-    padding: var(--spacing-lg) var(--spacing-xl);
+    font-size: 1.1rem;
+    padding: 0.875rem 1.5rem;
   }
 
   /* Buttons */
-  .btn {
-    padding: 12px 20px;
-  }
-
+  .btn { padding: 11px 18px; }
   .btn-lg {
-    padding: 14px 24px;
+    padding: 13px 20px;
     font-size: var(--font-size-sm);
   }
 
-  /* Contact info cards stack */
-  .contact-info-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Section header */
-  .section-header {
-    margin-bottom: var(--spacing-2xl);
-  }
+  /* Contact */
+  .contact-info-grid { grid-template-columns: 1fr; }
 
   /* Testimonials */
-  .testimonial-card {
-    padding: var(--spacing-lg);
-  }
+  .testimonial-card { padding: 1rem; }
 
-  /* Footer compact */
-  .footer-grid { gap: var(--spacing-xl); }
+  /* Footer */
+  .footer-grid { gap: 1.25rem; }
 
   /* Lightbox */
-  .lightbox-inner {
-    max-width: 95vw;
+  .lightbox-inner { max-width: 95vw; }
+
+  /* Page banner */
+  .page-banner { padding: 1.5rem 0; }
+
+  /* Countdown mais compacto */
+  .countdown-block {
+    min-width: 52px;
+    padding: 0.5rem 0.625rem;
   }
 
-  /* Page banner compact */
-  .page-banner {
-    padding: var(--spacing-2xl) 0;
+  .countdown-num { font-size: 1.25rem; }
+
+  /* Why cards padding menor */
+  .why-card { padding: 1.25rem; }
+
+  /* Offers grid */
+  .offers-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
   }
 }
 
