@@ -54,7 +54,13 @@
   }
 
   .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
     padding: 1rem 0;
+  }
+
+  .hero-visual {
+    display: none;
   }
 
   /* Features bar */
